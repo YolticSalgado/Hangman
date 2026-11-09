@@ -8,7 +8,7 @@
 <body>
     <!-- First Div: Hangman Image-->
     <div>
-        <img src="images/hangman6.gif" alt="Picture of Hangman">
+        <img id="hangmanpic" src="images/hangman6.gif" alt="Picture of Hangman">
     </div>
     <!-- Second Div: Game Initiate Text-->
     <div id="clue">
@@ -16,10 +16,19 @@
     </div>
     <!-- Third Div: Guess Input & Button-->
     <div>
-        <input type="text" size="1" maxlength="1">
-        <button onclick="guess();">Guess</button>
+        <!-- Addition 4 to Quest 3 - Hangman -->
+        <input id="guess" type="text" size="1" maxlength="1" disabled>
+        <button id="guessbutton" onclick="guess();" disabled>Guess</button>
+        <!-- Addition 3 to Quest 3 - Hangman-->
+        <button id="clearbutton" onclick="clearInputBox();">Clear</button>
+        <!-- Addition 3 to Quest 3 - Hangman-->
+        <!-- Addition 4 to Quest 3 - Hangman -->
     </div>
-    <!-- Fourth Div: New Game Button-->
+      <!-- Fourth Div: Guessed Letters-->
+    <div id="guesses">
+  
+    </div>
+    <!-- Fifth Div: New Game Button-->
     <div id="newgamearea">
         <button onclick="newGame();">New Game</button>
     </div>
